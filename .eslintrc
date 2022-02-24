@@ -1,6 +1,15 @@
 {
-  "extends": "standard",
+  "env": {
+    "browser": false,
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
   "rules": {
-    "no-param-reassign": "error"
+    "no-unused-vars": "warn"
   }
 }
