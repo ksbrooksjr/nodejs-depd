@@ -1,4 +1,3 @@
-
 var deprecate = require('../../..')('my-lib')
 
 exports.fn = fn
@@ -24,24 +23,28 @@ exports.propauto = 'thingie'
 Object.defineProperty(exports, 'propget', {
   configurable: true,
   value: 'thingie',
-  writable: false
+  writable: false,
 })
 
 Object.defineProperty(exports, 'propdyn', {
   configurable: true,
-  get: function () { return 'thingie' },
-  set: function () {}
+  get: function () {
+    return 'thingie'
+  },
+  set: function () {},
 })
 
 Object.defineProperty(exports, 'propgetter', {
   configurable: true,
-  get: function () { return 'thingie' }
+  get: function () {
+    return 'thingie'
+  },
 })
 
 // eslint-disable-next-line accessor-pairs
 Object.defineProperty(exports, 'propsetter', {
   configurable: true,
-  set: function () {}
+  set: function () {},
 })
 
 deprecate.property(exports, 'propa', 'propa gone')
@@ -55,15 +58,17 @@ exports.automsg = function () {
   deprecate()
 }
 
-exports.automsgnamed = function automsgnamed () {
+exports.automsgnamed = function automsgnamed() {
   deprecate()
 }
 
 exports.automsganon = function () {
-  (function () { deprecate() }())
+  ;(function () {
+    deprecate()
+  })()
 }
 
-exports.fnprop = function thefn () {}
+exports.fnprop = function thefn() {}
 exports.fnprop.propa = 'thingie'
 exports.fnprop.propautomsg = 'thingie'
 
@@ -78,6 +83,6 @@ exports.layerprop = function () {
   return exports.propa
 }
 
-function fn (a1, a2) {
+function fn(a1, a2) {
   return a2
 }

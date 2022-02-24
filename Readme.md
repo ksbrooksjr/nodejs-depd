@@ -100,10 +100,10 @@ logging source.
 The error represents the deprecation and is emitted only once with the same
 rules as writing to STDERR. The error has the following properties:
 
-  - `message` - This is the message given by the library
-  - `name` - This is always `'DeprecationError'`
-  - `namespace` - This is the namespace the deprecation came from
-  - `stack` - This is the stack of the call to the deprecated thing
+- `message` - This is the message given by the library
+- `name` - This is always `'DeprecationError'`
+- `namespace` - This is the namespace the deprecation came from
+- `stack` - This is the stack of the call to the deprecated thing
 
 Example `error.stack` output:
 
@@ -201,7 +201,7 @@ var deprecate = require('depd')('my-cool-module')
 
 // message automatically derived from function name
 // Object.oldfunction
-exports.oldfunction = deprecate.function(function oldfunction () {
+exports.oldfunction = deprecate.function(function oldfunction() {
   // all calls to function are deprecated
 })
 

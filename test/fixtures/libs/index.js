@@ -1,4 +1,3 @@
-
 exports.my = require('./my')
 exports.strict = require('./strict')
 
@@ -9,14 +8,14 @@ lazyRequireProperty(exports, 'old', './old')
 lazyRequireProperty(exports, 'thing', './thing')
 lazyRequireProperty(exports, 'trace', './trace')
 
-function lazyRequireProperty (obj, prop, path) {
-  function get () {
+function lazyRequireProperty(obj, prop, path) {
+  function get() {
     var val = require(path)
 
     Object.defineProperty(obj, prop, {
       configurable: true,
       enumerable: true,
-      value: val
+      value: val,
     })
 
     return val
@@ -25,6 +24,6 @@ function lazyRequireProperty (obj, prop, path) {
   Object.defineProperty(obj, prop, {
     configurable: true,
     enumerable: true,
-    get: get
+    get: get,
   })
 }

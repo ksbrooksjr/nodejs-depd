@@ -7,7 +7,7 @@ var cwd = process.cwd()
 
 runScripts(fs.readdirSync(__dirname))
 
-function runScripts (fileNames) {
+function runScripts(fileNames) {
   var fileName = fileNames.shift()
 
   if (!fileName) return
@@ -19,7 +19,7 @@ function runScripts (fileNames) {
   console.log('> %s %s', exe, path.relative(cwd, fullPath))
 
   var proc = spawn(exe, [fullPath], {
-    'stdio': 'inherit'
+    stdio: 'inherit',
   })
 
   proc.on('exit', function () {

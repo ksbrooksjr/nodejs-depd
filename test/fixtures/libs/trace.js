@@ -1,4 +1,3 @@
-
 var deprecate1 = require('../../..')('trace-lib')
 var deprecate2 = require('../../..')('trace-lib-other')
 

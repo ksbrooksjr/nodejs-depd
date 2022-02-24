@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -18,27 +17,27 @@ var suite = new benchmark.Suite()
 suite.add({
   name: 'function',
   minSamples: 100,
-  fn: 'mylib.fn()'
+  fn: 'mylib.fn()',
 })
 
 suite.add({
   name: 'wrapped',
   minSamples: 100,
-  fn: 'mylib.oldfn()'
+  fn: 'mylib.oldfn()',
 })
 
 suite.add({
   name: 'call log',
   minSamples: 100,
-  fn: 'mylib.old()'
+  fn: 'mylib.old()',
 })
 
-suite.on('cycle', function onCycle (event) {
+suite.on('cycle', function onCycle(event) {
   benchmarks.add(event.target)
 })
 
-suite.on('complete', function onComplete () {
+suite.on('complete', function onComplete() {
   benchmarks.log()
 })
 
-suite.run({async: false})
+suite.run({ async: false })

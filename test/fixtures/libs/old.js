@@ -1,4 +1,3 @@
-
 var deprecate1 = require('../../..')('old-lib')
 var deprecate2 = require('../../..')('old-lib-other')
 var deprecate3 = require('../../..')('my-cool-module')

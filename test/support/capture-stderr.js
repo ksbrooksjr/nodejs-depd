@@ -25,13 +25,13 @@ module.exports = captureStderr
  * @public
  */
 
-function captureStderr (fn, color) {
+function captureStderr(fn, color) {
   var chunks = []
   var isTTY = process.stderr.isTTY
   var write = process.stderr.write
 
   process.stderr.isTTY = Boolean(color)
-  process.stderr.write = function write (chunk, encoding) {
+  process.stderr.write = function write(chunk, encoding) {
     chunks.push(new Buffer(chunk, encoding))
   }
 

@@ -1,4 +1,3 @@
-
 var deprecate1 = require('../../..')('multi-lib')
 var deprecate2 = require('../../..')('multi-lib-other')
 

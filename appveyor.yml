@@ -1,17 +1,17 @@
 environment:
   matrix:
-    - nodejs_version: "0.8"
-    - nodejs_version: "0.10"
-    - nodejs_version: "0.12"
-    - nodejs_version: "1.8"
-    - nodejs_version: "2.5"
-    - nodejs_version: "3.3"
-    - nodejs_version: "4.8"
-    - nodejs_version: "5.12"
-    - nodejs_version: "6.12"
-    - nodejs_version: "7.10"
-    - nodejs_version: "8.9"
-    - nodejs_version: "9.2"
+    - nodejs_version: '0.8'
+    - nodejs_version: '0.10'
+    - nodejs_version: '0.12'
+    - nodejs_version: '1.8'
+    - nodejs_version: '2.5'
+    - nodejs_version: '3.3'
+    - nodejs_version: '4.8'
+    - nodejs_version: '5.12'
+    - nodejs_version: '6.12'
+    - nodejs_version: '7.10'
+    - nodejs_version: '8.9'
+    - nodejs_version: '9.2'
 cache:
   - node_modules
 install:
@@ -30,4 +30,4 @@ test_script:
   - set npm_test_command=test
   - for /f %%l in ('npm -ps ls istanbul') do set npm_test_command=test-ci
   - npm run %npm_test_command%
-version: "{build}"
+version: '{build}'

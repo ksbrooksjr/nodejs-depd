@@ -1,4 +1,3 @@
-
 'use strict'
 
 var deprecate = require('../../..')('strict-lib')
@@ -23,15 +22,17 @@ exports.automsg = function () {
   deprecate()
 }
 
-exports.automsgnamed = function automsgnamed () {
+exports.automsgnamed = function automsgnamed() {
   deprecate()
 }
 
 exports.automsganon = function () {
-  (function () { deprecate() }())
+  ;(function () {
+    deprecate()
+  })()
 }
 
-exports.fnprop = function thefn () {}
+exports.fnprop = function thefn() {}
 exports.fnprop.propa = 'thingie'
 exports.fnprop.propautomsg = 'thingie'
 
@@ -46,6 +47,6 @@ exports.layerprop = function () {
   return exports.propa
 }
 
-function fn (a1, a2) {
+function fn(a1, a2) {
   return a2
 }

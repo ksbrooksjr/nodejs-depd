@@ -25,7 +25,7 @@ module.exports = Buffer.concat || bufferConcat
  * @public
  */
 
-function bufferConcat (bufs) {
+function bufferConcat(bufs) {
   var i
   var len
   var length = 0
